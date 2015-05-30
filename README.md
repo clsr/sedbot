@@ -23,4 +23,4 @@ Example usage in chat:
     <foo> s/[a-e]//g s/\(.\)\(.\)/\2\1
     <sedbot> <foo> gfhi
 
-Note that the bot uses the standard grep (POSIX) regular expressions, i.e. use `.\+` and `\(foo\)\?` instead of `.+` and `(foo)?` as you'd do in egrep or other regex engines. Backreferences are written like `s/\(.\)/\1`, where `\1` matches the first capturing group. [Read more about sed regular expressions](https://www.gnu.org/software/sed/manual/html_node/Regular-Expressions.html.)
+Note that the bot uses the standard grep (POSIX) regular expressions, i.e. use `.\+` and `\(foo\)\?` instead of `.+` and `(foo)?` as you'd do in egrep or other regex engines. Backreferences are written like `s/\(.\)/\1`, where `\1` matches the first capturing group. [Read more about sed regular expressions.](https://www.gnu.org/software/sed/manual/html_node/Regular-Expressions.html)
