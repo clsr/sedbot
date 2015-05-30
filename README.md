@@ -22,3 +22,5 @@ Example usage in chat:
     <sedbot> <foo> ACEGi
     <foo> s/[a-e]//g s/\(.\)\(.\)/\2\1
     <sedbot> <foo> gfhi
+
+Note that the bot uses the standard grep (POSIX) regular expressions, i.e. use `.\+` and `\(foo\)\?` instead of `.+` and `(foo)?` as you'd do in egrep or other regex engines.
