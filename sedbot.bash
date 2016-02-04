@@ -7,6 +7,7 @@ SERVER=irc.example.net # the IRC server to connect to
 PORT=6667 # port to connect to
 NICK=sedbot # bot's nickname
 LOGIN=sedbot # bot's username
+PASSWD=$ARGV1
 REALNAME=sedbot # bot's name
 CHANNELS=('#example') # array of channels to autojoin at start
 IRC_LOG=~/sedbot.log # irc message log
@@ -36,6 +37,10 @@ connect() {
 		return $?
 	fi
 	sendmsg USER "$LOGIN 8 *" "$REALNAME"
+	if (($?)); then
+		return $?
+	fi
+	sendmsg PRIVMSG "NickServ :identify $PASSWD"
 	if (($?)); then
 		return $?
 	fi
