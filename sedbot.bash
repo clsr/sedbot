@@ -40,7 +40,7 @@ connect() {
 	if (($?)); then
 		return $?
 	fi
-	sendmsg NICKSERV "identify $PASSWD"
+	sendmsg PRIVMSG "NickServ :identify $PASSWD"
 	if (($?)); then
 		return $?
 	fi
